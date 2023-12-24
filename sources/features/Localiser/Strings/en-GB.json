@@ -1,0 +1,9 @@
+{
+  "placeholder": "Placeholder english text",
+  "missing translation": "A key not available in languages except enGB",
+  "TARGET": "Target",
+  
+  "morning_menu_title": "Morning",
+  "day_menu_title": "Day",
+  "evening_menu_title": "Evening"
+}
