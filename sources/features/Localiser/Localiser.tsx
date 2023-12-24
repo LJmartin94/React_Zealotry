@@ -1,6 +1,6 @@
 import * as RNLocalise from 'react-native-localize'; //Seems to cause issues on ios
 
-import { type Strings } from './Strings';
+import type { Strings } from './Strings';
 import enGB from './Strings/en-GB.json';
 import nlNL from './Strings/nl-NL.json';
 

@@ -1,0 +1,76 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+		"node": true,
+		"react-native/react-native": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		  }
+    },
+    "plugins": [
+        "@typescript-eslint",
+		"react",
+		"react-native"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+		],
+		"react-native/no-unused-styles": "error",
+		"react-native/split-platform-components": "error",
+		"react-native/no-inline-styles": "error",
+		"react-native/no-color-literals": "error",
+		"react-native/no-raw-text": "error",
+		"react-native/no-single-element-style-arrays": "error",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{
+			  "vars": "all",
+			  "args": "all",
+			  "argsIgnorePattern": "^_",
+			  "ignoreRestSiblings": true
+			}
+		  ],
+		  "@typescript-eslint/ban-ts-comment": [
+			"error",
+			{ "ts-expect-error": "allow-with-description", "minimumDescriptionLength": 20 }
+		  ],
+		  "@typescript-eslint/array-type": "error",
+		  "@typescript-eslint/member-delimiter-style": "error",
+		  "@typescript-eslint/prefer-ts-expect-error": "error",
+		  "@typescript-eslint/no-explicit-any": "error",
+		  "react-hooks/exhaustive-deps": [
+			"error",
+			{
+			  "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+			}
+		  ],
+		  "prefer-const": "error",
+		  "no-console": "error",
+		  "unused-imports/no-unused-imports": "error"
+    }
+}

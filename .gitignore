@@ -16,7 +16,7 @@
 
 !.prettierrc.json
 !.prettierignore
-!.eslintrc
+!.eslintrc*
 !.eslintignore
 !eslint/**
 

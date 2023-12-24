@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  type ImageSourcePropType,
+  ImageSourcePropType,
 } from 'react-native';
 
 export type DayPartProps = {
