@@ -1,3 +1,13 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+	"resolveJsonModule": true,
+	"moduleResolution": "node",
+	"baseUrl": "./",
+	"lib": ["ESNext"],
+	"paths": {
+		"#features/*": ["./sources/features/*"],
+		"#UI/*": ["./sources/ui/*"]
+	  }
+	},
 }
