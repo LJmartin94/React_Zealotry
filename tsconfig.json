@@ -6,8 +6,9 @@
 	"baseUrl": "./",
 	"lib": ["ESNext"],
 	"paths": {
-		"#features/*": ["./sources/features/*"],
-		"#UI/*": ["./sources/ui/*"]
+		"#Features/*": ["./sources/features/*"],
+		"#UI/*": ["./sources/ui/*"],
+		"#Assets/*": ["./assets/*"],
 	  }
 	},
 }
