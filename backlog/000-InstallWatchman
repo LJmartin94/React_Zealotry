@@ -1,1 +1,0 @@
-Need to install watchman, as it should hopefully prevent the need of running the `sudo sysctl fs.inotify.max_user_watches=131070` command every session.
