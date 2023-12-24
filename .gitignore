@@ -1,0 +1,36 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!Notes
+!WeeklyBuilds.txt
+!src/**
+!package.json
+
+!app.json
+!index.js
+!App.tsx
+
+!.prettierrc.json
+!.prettierignore
+!.eslintrc
+!.eslintignore
+!eslint/**
+
+!babel.config.js
+!tsconfig.json
+!jsconfig.json
+!react-native.config.js
+
+!metro.config.js
+
+# ...even if they are in subdirectories
+!*/
+
+#Do still ignore these
+node_modules/
+
+# if the files to be tracked are in subdirectories
+# !*/a/b/file1.txt
+# !*/a/b/c/*
