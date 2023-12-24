@@ -1,0 +1,3 @@
+Need to install watchman, as it should hopefully prevent the need of running the `sudo sysctl fs.inotify.max_user_watches=131070` command every session.
+
+Resolution: installing watchman was taking up 8gb when it ran out of harddisk space. Not worth. Have added the command to increase file watchers as an alias to shell config.
