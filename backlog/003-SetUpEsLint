@@ -1,0 +1,1 @@
+Make sure it enforces proper imports, and no string literals allowed (will help enforce using localiser).
