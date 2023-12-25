@@ -1,0 +1,5 @@
+Make sure it enforces proper imports, and no string literals allowed (will help enforce using localiser).
+
+Resolution:
+It was a pain in the arse, but its done.
+We have eslint and prettier, and a way of augmenting the standard rules and config in eslintrc.json with a custom rule module and an additional custom config.

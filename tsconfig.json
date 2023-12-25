@@ -2,7 +2,10 @@
 	"extends": "@react-native/typescript-config/tsconfig.json",
 	"compilerOptions": {
 		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"jsx": "react-native",
 		"baseUrl": "./",
 		"lib": [
 			"ESNext"
