@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { HomeScreen } from '#UI/HomeScreen';
-import { Localiser } from '#Features/Localiser';
+import { HomeScreen } from '#ui/HomeScreen';
+import { Localiser } from '#features/Localiser';
 
 Localiser.init();
 

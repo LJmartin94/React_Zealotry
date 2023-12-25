@@ -8,13 +8,13 @@
 			"ESNext"
 		],
 		"paths": {
-			"#Features/*": [
+			"#features/*": [
 				"./sources/features/*"
 			],
-			"#UI/*": [
+			"#ui/*": [
 				"./sources/ui/*"
 			],
-			"#Assets/*": [
+			"#assets/*": [
 				"./assets/*"
 			],
 		}

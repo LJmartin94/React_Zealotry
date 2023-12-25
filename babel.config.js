@@ -6,9 +6,9 @@ module.exports = {
 			{
 				root: ['./'],
 				alias: {
-					'#Features': './sources/features',
-					'#UI': './sources/ui',
-					'#Assets': './assets',
+					'#features': './sources/features',
+					'#ui': './sources/ui',
+					'#assets': './assets',
 				},
 			},
 		],
