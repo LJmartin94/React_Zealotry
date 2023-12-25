@@ -1,14 +1,22 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json",
-  "compilerOptions": {
-	"resolveJsonModule": true,
-	"moduleResolution": "node",
-	"baseUrl": "./",
-	"lib": ["ESNext"],
-	"paths": {
-		"#Features/*": ["./sources/features/*"],
-		"#UI/*": ["./sources/ui/*"],
-		"#Assets/*": ["./assets/*"],
-	  }
+	"extends": "@react-native/typescript-config/tsconfig.json",
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"lib": [
+			"ESNext"
+		],
+		"paths": {
+			"#Features/*": [
+				"./sources/features/*"
+			],
+			"#UI/*": [
+				"./sources/ui/*"
+			],
+			"#Assets/*": [
+				"./assets/*"
+			],
+		}
 	},
 }

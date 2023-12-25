@@ -1,3 +1,3 @@
 export type Strings = {
-  [Key in string]: string;
+	[Key in string]: string;
 };

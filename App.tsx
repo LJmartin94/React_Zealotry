@@ -7,7 +7,7 @@ Localiser.init();
 
 
 const App = () => {
-  return <HomeScreen />;
+	return <HomeScreen />;
 };
 
 export default App;

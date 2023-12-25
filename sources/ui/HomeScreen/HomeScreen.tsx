@@ -4,5 +4,5 @@ import { DayMenu } from '#UI/DayMenu';
 
 //The main screen of the app
 export const HomeScreen = () => {
-  return <DayMenu />;
+	return <DayMenu />;
 };
