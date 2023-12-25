@@ -18,7 +18,8 @@
 !.prettierignore
 !.eslintrc*
 !.eslintignore
-!eslint/**
+#I share my eslint framework for setting up rules, but not my own custom rules & preferences.
+!example-eslint/**
 
 !babel.config.js
 !tsconfig.json
