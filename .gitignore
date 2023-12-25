@@ -11,7 +11,7 @@
 !package.json
 
 !app.json
-!index.js
+!./index.js
 !App.tsx
 
 !.prettierrc.json
@@ -19,7 +19,9 @@
 !.eslintrc*
 !.eslintignore
 #I share my eslint framework for setting up rules, but not my own custom rules & preferences.
-!example-eslint/**
+!eslint/example/**
+!eslint/index.js
+!eslint/package.json
 
 !babel.config.js
 !tsconfig.json
