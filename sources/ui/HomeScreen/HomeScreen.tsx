@@ -1,19 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, ImageSourcePropType, StyleSheet, Text, View } from 'react-native';
 
 import { DayMenu } from '#ui/DayMenu';
-import { Fill } from '#ui/Styles';
+import { Fill, FillGravity, PushLeft, StyleComposer, Title , DEFAULT_PADDING } from '#ui/Styles';
+
+export type HomeScreenProps = {
+	title: string;
+	backgroundImage: ImageSourcePropType;
+};
 
 //The main screen of the app
-export const HomeScreen = () => {
+export const HomeScreen = ({title, backgroundImage}: HomeScreenProps) => {
 	return (
 		<>
-			<View style={StyleSheet.compose(Fill.viewStyle, styles.title)}>
-				<Text>{'Test'}</Text>
-			</View>
-			<View style={StyleSheet.compose(Fill.viewStyle, styles.menu)}>
-				<DayMenu />
-			</View>
+			<ImageBackground style={Fill.imageStyle} source={backgroundImage}>
+				<View style={StyleComposer([FillGravity.viewStyle, styles.title])}>
+					<Text style={StyleComposer([Title.textStyle, PushLeft.textStyle])}>{title}</Text>
+				</View>
+				<View style={StyleComposer([Fill.viewStyle, styles.menu])}>
+					<DayMenu />
+				</View>
+			</ImageBackground>
 		</>
 	);
 };
@@ -24,5 +31,6 @@ const styles = StyleSheet.create({
 	},
 	menu: {
 		flex: 3,
+		padding: DEFAULT_PADDING,
 	},
 });

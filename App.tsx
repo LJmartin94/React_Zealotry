@@ -7,7 +7,8 @@ Localiser.init();
 
 
 const App = () => {
-	return <HomeScreen />;
+	//TODO: get this from state
+	return <HomeScreen title={'Test'} backgroundImage={require('#assets/img/winter.jpg')} />;
 };
 
 export default App;
