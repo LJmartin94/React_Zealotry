@@ -12,6 +12,14 @@ export const enum ThemeColourElement {
 	errorColour = 'errorColour',
 }
 
+export const PRIMARY_COLOUR = ThemeColourElement.primaryColour;
+export const PRIMARY_VARIANT = ThemeColourElement.primaryVariant;
+export const SECONDARY_COLOUR = ThemeColourElement.secondaryColour;
+export const SECONDARY_VARIANT = ThemeColourElement.secondaryVariant;
+export const BACKGROUND_COLOUR = ThemeColourElement.backgroundColour;
+export const SURFACE_COLOUR = ThemeColourElement.surfaceColour;
+export const ERROR_COLOUR = ThemeColourElement.errorColour;
+
 export function CreateThemedView(
 	themeStyle: ColourSchemeTemplate,
 	flavour: ThemeColourElement,
@@ -22,7 +30,7 @@ export function CreateThemedView(
 	let fillColour: ColorValue;
 
 	switch (flavour) {
-		case ThemeColourElement.primaryColour: {
+		case PRIMARY_COLOUR: {
 			onColour = isInLightmode
 				? themeStyle.onPrimaryColourLight
 				: themeStyle.onPrimaryColourDark;
@@ -31,7 +39,7 @@ export function CreateThemedView(
 				: themeStyle.primaryColourDark;
 			break;
 		}
-		case ThemeColourElement.primaryVariant: {
+		case PRIMARY_VARIANT: {
 			onColour = isInLightmode
 				? themeStyle.onPrimaryVariantLight
 				: themeStyle.onPrimaryVariantDark;
@@ -40,7 +48,7 @@ export function CreateThemedView(
 				: themeStyle.primaryVariantDark;
 			break;
 		}
-		case ThemeColourElement.secondaryColour: {
+		case SECONDARY_COLOUR: {
 			onColour = isInLightmode
 				? themeStyle.onSecondaryColourLight
 				: themeStyle.onSecondaryColourDark;
@@ -49,7 +57,7 @@ export function CreateThemedView(
 				: themeStyle.secondaryColourDark;
 			break;
 		}
-		case ThemeColourElement.secondaryVariant: {
+		case SECONDARY_VARIANT: {
 			onColour = isInLightmode
 				? themeStyle.onSecondaryVariantLight
 				: themeStyle.onSecondaryVariantDark;
@@ -58,7 +66,7 @@ export function CreateThemedView(
 				: themeStyle.secondaryVariantDark;
 			break;
 		}
-		case ThemeColourElement.backgroundColour: {
+		case BACKGROUND_COLOUR: {
 			onColour = isInLightmode
 				? themeStyle.onBackgroundColourLight
 				: themeStyle.onBackgroundColourDark;
@@ -67,7 +75,7 @@ export function CreateThemedView(
 				: themeStyle.backgroundColourDark;
 			break;
 		}
-		case ThemeColourElement.surfaceColour: {
+		case SURFACE_COLOUR: {
 			onColour = isInLightmode
 				? themeStyle.onSurfaceColourLight
 				: themeStyle.onSurfaceColourDark;
@@ -76,7 +84,7 @@ export function CreateThemedView(
 				: themeStyle.surfaceColourDark;
 			break;
 		}
-		case ThemeColourElement.errorColour: {
+		case ERROR_COLOUR: {
 			onColour = isInLightmode
 				? themeStyle.onErrorColourLight
 				: themeStyle.onErrorColourDark;
