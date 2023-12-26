@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-	'customrule': require('./customrule'),
+	customrule: require('./customrule'),
 };

@@ -17,46 +17,34 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:react/recommended",
 		"plugin:zealotry/customRules"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-    "project": "./tsconfig.json",
+		"project": "./tsconfig.json",
 		"ecmaVersion": 6,
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true,
-      "experimentalObjectRestSpread": true
+			"experimentalObjectRestSpread": true
 		}
 	},
 	"settings": {
-			"react": {
-				"version": "detect"
-			},
-			"import/resolver": {
-				"babel-module": {}
-			}
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"babel-module": {}
+		}
 	},
 	"rules": {
-		"indent": [
-			"error",
-			"tab",
-			{"SwitchCase": 1}
-		],
-		"linebreak-style": [
-			"error",
-			"unix"
-		],
-		"quotes": [
-			"error",
-			"single"
-		],
-		"semi": [
-			"error",
-			"always"
-		],
+		"max-len": ["error", { "code": 80, "ignoreComments": true }],
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
 		"react-native/no-unused-styles": "error",
 		"react-native/split-platform-components": "error",
 		"react-native/no-inline-styles": "error",
@@ -92,49 +80,56 @@
 		"no-console": "error",
 		"unused-imports/no-unused-imports": "error",
 		"react-hooks/rules-of-hooks": "error",
-    "import/order": [
-      "error",
-      {
-        "groups": ["builtin", "external", "index", "sibling", "parent", "internal"],
-        "pathGroups": [
-          {
-            "pattern": "react*",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "#libs/*",
-            "group": "external",
-            "position": "after"
-          },
-          {
-            "pattern": "#*",
-            "group": "internal"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc"
-        }
-      }
-    ],
-    "import/no-duplicates": "error",
-    "react/jsx-boolean-value": ["error", "always"],
-    "react/jsx-key": "error",
-    "react/jsx-no-duplicate-props": [
-      "error",
-      {
-        "ignoreCase": true
-      }
-    ],
-    "react/jsx-no-literals": "error",
-    "react/jsx-pascal-case": "error",
-    "react/jsx-uses-react": "error",
-    "react/self-closing-comp": "error",
-    "react/jsx-no-undef": "error",
-    "react/jsx-uses-vars": "error",
-    "react/display-name": "error",
-    "react/no-array-index-key": "error"
+		"import/order": [
+			"error",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"index",
+					"sibling",
+					"parent",
+					"internal"
+				],
+				"pathGroups": [
+					{
+						"pattern": "react*",
+						"group": "external",
+						"position": "before"
+					},
+					{
+						"pattern": "#libs/*",
+						"group": "external",
+						"position": "after"
+					},
+					{
+						"pattern": "#*",
+						"group": "internal"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["react"],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc"
+				}
+			}
+		],
+		"import/no-duplicates": "error",
+		"react/jsx-boolean-value": ["error", "always"],
+		"react/jsx-key": "error",
+		"react/jsx-no-duplicate-props": [
+			"error",
+			{
+				"ignoreCase": true
+			}
+		],
+		"react/jsx-no-literals": "error",
+		"react/jsx-pascal-case": "error",
+		"react/jsx-uses-react": "error",
+		"react/self-closing-comp": "error",
+		"react/jsx-no-undef": "error",
+		"react/jsx-uses-vars": "error",
+		"react/display-name": "error",
+		"react/no-array-index-key": "error"
 	}
 }

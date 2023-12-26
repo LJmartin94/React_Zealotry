@@ -19,14 +19,14 @@ export class Localiser {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let localiser: any = {};
 		switch (locale) {
-		case 'en-GB':
-			localiser = enGB;
-			break;
-		case 'nl-NL':
-			localiser = nlNL;
-			break;
-		default:
-			localiser = enGB;
+			case 'en-GB':
+				localiser = enGB;
+				break;
+			case 'nl-NL':
+				localiser = nlNL;
+				break;
+			default:
+				localiser = enGB;
 		}
 		for (const key in localiser) {
 			this._strings[key] = localiser[key];

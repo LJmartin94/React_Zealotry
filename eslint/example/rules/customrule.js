@@ -5,11 +5,11 @@ module.exports = {
 			description: 'Description of the rule',
 		},
 		fixable: 'code',
-		schema: [] // no options
+		schema: [], // no options
 	},
-	create: function(_context) {
+	create: function (_context) {
 		return {
 			// callback functions
 		};
-	}
+	},
 };

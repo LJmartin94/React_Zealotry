@@ -1,7 +1,7 @@
 'use strict';
-module.exports={
+module.exports = {
 	plugins: ['zealotry'],
 	rules: {
-		'zealotry/customrule': 'error'
-	}
+		'zealotry/customrule': 'error',
+	},
 };

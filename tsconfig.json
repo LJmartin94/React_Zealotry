@@ -7,19 +7,11 @@
 		"esModuleInterop": true,
 		"jsx": "react-native",
 		"baseUrl": "./",
-		"lib": [
-			"ESNext"
-		],
+		"lib": ["ESNext"],
 		"paths": {
-			"#features/*": [
-				"./sources/features/*"
-			],
-			"#ui/*": [
-				"./sources/ui/*"
-			],
-			"#assets/*": [
-				"./assets/*"
-			],
+			"#features/*": ["./sources/features/*"],
+			"#ui/*": ["./sources/ui/*"],
+			"#assets/*": ["./assets/*"]
 		}
-	},
+	}
 }
