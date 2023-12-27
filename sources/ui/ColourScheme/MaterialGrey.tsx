@@ -42,7 +42,7 @@ export class MaterialGrey implements ColourSchemeTemplate {
 	surfaceColourLight = '#ecebea';
 	errorColourLight = '#ff1201';
 	onPrimaryColourLight = '#fafafa';
-	onPrimaryVariantLight = '#fafafa';
+	onPrimaryVariantLight = '#262626';
 	onSecondaryColourLight = '#fafafa';
 	onSecondaryVariantLight = '#fafafa';
 	onBackgroundColourLight = '#262626';

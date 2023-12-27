@@ -9,17 +9,23 @@ import {
 
 // import { DayMenu } from '#ui/DayMenu';
 import {
+	BACKGROUND_COLOUR,
 	CreateThemedView,
 	MaterialGrey,
-	ThemeColourElement,
+	PRIMARY_COLOUR,
+	PRIMARY_VARIANT,
 } from '#ui/ColourScheme';
+import { DayMenu } from '#ui/DayMenu';
 import {
+	Body,
+	ComponentStyleSheet,
+	DEFAULT_PADDING,
 	Fill,
 	FillGravity,
 	PushLeft,
-	StyleComposer,
+	SlightOpacity,
+	Subtitle,
 	Title,
-	DEFAULT_PADDING,
 } from '#ui/Styles';
 
 export type HomeScreenProps = {
@@ -28,45 +34,46 @@ export type HomeScreenProps = {
 };
 
 //The main screen of the app
-export const HomeScreen = ({ title, backgroundImage }: HomeScreenProps) => {
-	const themeClass = new MaterialGrey();
+export const HomeScreen = ({
+	title,
+	backgroundImage,
+}: HomeScreenProps) => {
+	const theme = new MaterialGrey();
+
+	const primaryColour = CreateThemedView(theme, PRIMARY_COLOUR, true);
+	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
+	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
 	return (
 		<>
-			<ImageBackground style={Fill.imageStyle} source={backgroundImage}>
-				<View style={
-					StyleComposer([FillGravity.viewStyle, styles.title])}>
-					<Text style={
-						StyleComposer([Title.textStyle, PushLeft.textStyle])}>
-						{title}
-					</Text>
+			<ImageBackground style={Fill.image} source={backgroundImage}>
+				<View style={floatingTitleStyle.view}>
+					<Text style={floatingTitleStyle.text}>{title}</Text>
 				</View>
-				<View style={StyleComposer([Fill.viewStyle, styles.menu])}>
-					<View
-						style={StyleComposer([
-							styles.widgetTitle,
-							CreateThemedView(
-								themeClass,
-								ThemeColourElement.primaryColour,
-								true
-							).viewStyle,
-						])}
-					>
-						<Text>{'lol'}</Text>
+
+				<View style={widgetContainerStyle.view}>
+					<View style={[widgetTitleStyle.view, primaryColour.view]}>
+						<Text style={[widgetTitleStyle.text, primaryColour.text]}>
+							{'Header'}
+						</Text>
 					</View>
-					{/* <View style={[styles.widgetTitle, {backgroundColor: themeClass.primaryColourLight}]}>
-						<Text style={StyleComposer([Title.textStyle, [styles.empty, {color: themeClass.onPrimaryColourLight}]])}>{'Header'}</Text>
+					<View style={[widgetSubtitleStyle.view, primaryVariant.view]}>
+						<Text style={[widgetSubtitleStyle.text, primaryVariant.text]}>
+							{'Subtitle'}
+						</Text>
 					</View>
-					<View style={[styles.widgetSubtitle, {backgroundColor: themeClass.primaryVariantLight}]} />
-					<View style={[styles.widgetBody, {backgroundColor: themeClass.backgroundColourLight}]} /> */
-					}
-					{/* <DayMenu /> */}
+					<View style={[widgetBodyStyle.view, background.view]}>
+						<Text style={[widgetBodyStyle.text, background.text]}>
+							{'Lorem ipsum etc etc'}
+						</Text>
+						<DayMenu />
+					</View>
 				</View>
 			</ImageBackground>
 		</>
 	);
 };
 
-const styles = StyleSheet.create({
+const weights = StyleSheet.create({
 	title: {
 		flex: 1,
 	},
@@ -75,21 +82,35 @@ const styles = StyleSheet.create({
 		padding: DEFAULT_PADDING,
 	},
 	widgetTitle: {
-		flex: 3,
-		alignItems: 'stretch',
-		justifyContent: 'center',
-		// backgroundColor: themeClass.primaryColourLight,
+		flex: 4,
 	},
-	// widgetSubtitle: {
-	// 	flex: 1,
-	// 	// backgroundColor: themeClass.primaryVariantLight,
-	// 	alignItems: 'stretch',
-	// 	justifyContent: 'center',
-	// },
-	// widgetBody: {
-	// 	flex:17,
-	// 	// backgroundColor: themeClass.backgroundColourLight,
-	// 	alignItems: 'stretch',
-	// 	justifyContent: 'center',
-	// }
+	widgetSubtitle: {
+		flex: 2,
+	},
+	widgetBody: {
+		flex: 17,
+	},
 });
+
+const floatingTitleStyle = ComponentStyleSheet(
+	[FillGravity.view, weights.title],
+	[Title.text, PushLeft.text],
+	[]
+);
+const widgetContainerStyle = ComponentStyleSheet([
+	Fill.view,
+	SlightOpacity.view,
+	weights.menu,
+]);
+const widgetTitleStyle = ComponentStyleSheet(
+	[Fill.view, weights.widgetTitle],
+	[Title.text]
+);
+const widgetSubtitleStyle = ComponentStyleSheet(
+	[Fill.view, weights.widgetSubtitle],
+	[Subtitle.text]
+);
+const widgetBodyStyle = ComponentStyleSheet(
+	[Fill.view, weights.widgetBody, Body.view],
+	[Body.text]
+);

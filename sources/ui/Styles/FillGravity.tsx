@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export const FillGravity = StyleSheet.create({
-	viewStyle: {
+	view: {
 		flex: 1,
 		alignItems: 'stretch',
 		justifyContent: 'flex-end',
 	},
-	imageStyle: {
+	image: {
 		flex: 1,
 		alignItems: 'stretch',
 		justifyContent: 'flex-end',

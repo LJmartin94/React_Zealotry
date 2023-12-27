@@ -8,7 +8,7 @@ import { Fill } from '#ui/Styles';
 
 export const DayMenu = () => {
 	return (
-		<View style={Fill.viewStyle}>
+		<View style={Fill.view}>
 			<DayPartButton
 				title={Localiser.getString('morning_menu_title')}
 				backgroundImage={require('#assets/img/morning_button.png')}

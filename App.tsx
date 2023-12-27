@@ -9,7 +9,8 @@ const App = () => {
 	//TODO: get this from state
 	return (
 		<HomeScreen
-			title={'Test'}
+			// eslint-disable-next-line quotes
+			title={"Wodan's day, 40th day of Winter"}
 			backgroundImage={require('#assets/img/winter.jpg')}
 		/>
 	);

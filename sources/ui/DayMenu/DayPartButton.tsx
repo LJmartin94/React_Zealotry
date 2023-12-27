@@ -13,15 +13,18 @@ export type DayPartProps = {
 	backgroundImage: ImageSourcePropType;
 };
 
-export const DayPartButton = ({ title, backgroundImage }: DayPartProps) => {
+export const DayPartButton = ({
+	title,
+	backgroundImage,
+}: DayPartProps) => {
 	return (
-		<TouchableOpacity style={FillGravity.viewStyle}>
+		<TouchableOpacity style={FillGravity.view}>
 			<ImageBackground
 				source={backgroundImage}
 				resizeMode='cover'
-				style={FillGravity.imageStyle}
+				style={FillGravity.image}
 			>
-				<Text style={Title.textStyle}>{title}</Text>
+				<Text style={Title.text}>{title}</Text>
 			</ImageBackground>
 		</TouchableOpacity>
 	);

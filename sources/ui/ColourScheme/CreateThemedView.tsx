@@ -104,17 +104,16 @@ export function CreateThemedView(
 		}
 	}
 	return StyleSheet.create({
-		viewStyle: {
+		view: {
 			color: onColour,
 			backgroundColor: fillColour,
 		},
-		imageStyle: {
+		image: {
 			color: onColour,
 			backgroundColor: fillColour,
 		},
-		textStyle: {
+		text: {
 			color: onColour,
-			backgroundColor: fillColour,
 		},
 	});
 }

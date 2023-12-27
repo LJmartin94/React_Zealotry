@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export const Fill = StyleSheet.create({
-	viewStyle: {
+	view: {
 		flex: 1,
 		alignItems: 'stretch',
 		justifyContent: 'center',
 	},
-	imageStyle: {
+	image: {
 		flex: 1,
 		alignItems: 'stretch',
 		justifyContent: 'center',
