@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Localiser } from '#features/Localiser';
 import { HomeScreen } from '#ui/HomeScreen';
-// import { ThemeTestScreen } from '#ui/ColourScheme';
 
 Localiser.init();
 
