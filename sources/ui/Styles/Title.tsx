@@ -11,4 +11,8 @@ export const Title = StyleSheet.create({
 		padding: 0,
 		color: 'black',
 	},
+	view: {},
+	image: {
+		fontSize: 42,
+	},
 });

@@ -4,25 +4,30 @@ import {
 	ImageSourcePropType,
 	StyleSheet,
 	Text,
+	TouchableOpacity,
 	View,
 } from 'react-native';
 
-// import { DayMenu } from '#ui/DayMenu';
 import {
 	BACKGROUND_COLOUR,
 	CreateThemedView,
+	ERROR_COLOUR,
 	MaterialGrey,
 	PRIMARY_COLOUR,
 	PRIMARY_VARIANT,
+	SECONDARY_COLOUR,
 } from '#ui/ColourScheme';
 import { DayMenu } from '#ui/DayMenu';
 import {
+	BasicRoundButton,
 	Body,
 	ComponentStyleSheet,
 	DEFAULT_PADDING,
 	Fill,
+	FillFloat,
 	FillGravity,
 	PushLeft,
+	PushRight,
 	SlightOpacity,
 	Subtitle,
 	Title,
@@ -43,6 +48,8 @@ export const HomeScreen = ({
 	const primaryColour = CreateThemedView(theme, PRIMARY_COLOUR, true);
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
+	const secondaryColour = CreateThemedView(theme, SECONDARY_COLOUR, true);
+	const errorColour = CreateThemedView(theme, ERROR_COLOUR, true);
 	return (
 		<>
 			<ImageBackground style={Fill.image} source={backgroundImage}>
@@ -53,7 +60,7 @@ export const HomeScreen = ({
 				<View style={widgetContainerStyle.view}>
 					<View style={[widgetTitleStyle.view, primaryColour.view]}>
 						<Text style={[widgetTitleStyle.text, primaryColour.text]}>
-							{'Header'}
+							{'DAILY RITUALS'}
 						</Text>
 					</View>
 					<View style={[widgetSubtitleStyle.view, primaryVariant.view]}>
@@ -62,10 +69,31 @@ export const HomeScreen = ({
 						</Text>
 					</View>
 					<View style={[widgetBodyStyle.view, background.view]}>
-						<Text style={[widgetBodyStyle.text, background.text]}>
-							{'Lorem ipsum etc etc'}
-						</Text>
-						<DayMenu />
+						<View style={widgetBodyText.view}>
+							<Text style={[widgetBodyStyle.text, background.text]}>
+								{'Lorem ipsum etc etc'}
+							</Text>
+						</View>
+						<View style={[widgetBodyText.view, errorColour.view]}>
+							<Text style={[widgetBodyStyle.text, errorColour.text]}>
+								{'ERROR!! OH NO'}
+							</Text>
+						</View>
+
+						<View style={[widgetBodyText.view, { opacity: 0.7 }]}>
+							<DayMenu />
+						</View>
+						<View style={widgetBodyButton.view}>
+							<TouchableOpacity
+								style={[BasicRoundButton.view, secondaryColour.view]}
+							>
+								<Text
+									style={[widgetBodyButton.text, secondaryColour.text]}
+								>
+									{'+'}
+								</Text>
+							</TouchableOpacity>
+						</View>
 					</View>
 				</View>
 			</ImageBackground>
@@ -104,7 +132,7 @@ const widgetContainerStyle = ComponentStyleSheet([
 ]);
 const widgetTitleStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetTitle],
-	[Title.text]
+	[Subtitle.text]
 );
 const widgetSubtitleStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetSubtitle],
@@ -113,4 +141,9 @@ const widgetSubtitleStyle = ComponentStyleSheet(
 const widgetBodyStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetBody, Body.view],
 	[Body.text]
+);
+const widgetBodyText = ComponentStyleSheet([FillFloat.view]);
+const widgetBodyButton = ComponentStyleSheet(
+	[FillGravity.view, PushRight.view],
+	[Title.image]
 );

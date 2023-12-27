@@ -107,10 +107,12 @@ export function CreateThemedView(
 		view: {
 			color: onColour,
 			backgroundColor: fillColour,
+			borderColor: fillColour,
 		},
 		image: {
 			color: onColour,
 			backgroundColor: fillColour,
+			borderColor: fillColour,
 		},
 		text: {
 			color: onColour,

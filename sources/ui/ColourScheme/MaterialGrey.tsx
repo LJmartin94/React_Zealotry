@@ -51,18 +51,18 @@ export class MaterialGrey implements ColourSchemeTemplate {
 	lightDefault = true;
 
 	//TODO: Make Dark theme
-	primaryColourDark = '#5e5a54';
-	primaryVariantDark = '#afadaa';
+	primaryColourDark = '#423f3a';
+	primaryVariantDark = '#56524d';
 	secondaryColourDark = '#ff9201';
 	secondaryVariantDark = '#ff9d1a';
-	backgroundColourDark = '#ecebea';
-	surfaceColourDark = '#ecebea';
+	backgroundColourDark = '#76736e';
+	surfaceColourDark = '#76736e';
 	errorColourDark = '#ff1201';
 	onPrimaryColourDark = '#fafafa';
 	onPrimaryVariantDark = '#fafafa';
 	onSecondaryColourDark = '#fafafa';
 	onSecondaryVariantDark = '#fafafa';
-	onBackgroundColourDark = '#262626';
-	onSurfaceColourDark = '#262626';
+	onBackgroundColourDark = '#fafafa';
+	onSurfaceColourDark = '#fafafa';
 	onErrorColourDark = '#fafafa';
 }
