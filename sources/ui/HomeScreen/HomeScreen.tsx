@@ -4,7 +4,6 @@ import {
 	ImageSourcePropType,
 	StyleSheet,
 	Text,
-	TouchableOpacity,
 	View,
 } from 'react-native';
 
@@ -19,7 +18,6 @@ import {
 } from '#ui/ColourScheme';
 import { DayMenu } from '#ui/DayMenu';
 import {
-	BasicRoundButton,
 	Body,
 	ComponentStyleSheet,
 	DEFAULT_PADDING,
@@ -58,41 +56,15 @@ export const HomeScreen = ({
 				</View>
 
 				<View style={widgetContainerStyle.view}>
-					<View style={[widgetTitleStyle.view, primaryColour.view]}>
-						<Text style={[widgetTitleStyle.text, primaryColour.text]}>
+					<View style={[widgetTitleStyle.view, primaryVariant.view]}>
+						<Text style={[widgetTitleStyle.text, primaryVariant.text]}>
 							{'DAILY RITUALS'}
 						</Text>
 					</View>
-					<View style={[widgetSubtitleStyle.view, primaryVariant.view]}>
-						<Text style={[widgetSubtitleStyle.text, primaryVariant.text]}>
-							{'Subtitle'}
-						</Text>
-					</View>
-					<View style={[widgetBodyStyle.view, background.view]}>
-						<View style={widgetBodyText.view}>
-							<Text style={[widgetBodyStyle.text, background.text]}>
-								{'Lorem ipsum etc etc'}
-							</Text>
-						</View>
-						<View style={[widgetBodyText.view, errorColour.view]}>
-							<Text style={[widgetBodyStyle.text, errorColour.text]}>
-								{'ERROR!! OH NO'}
-							</Text>
-						</View>
 
+					<View style={[widgetBodyStyle.view, background.view]}>
 						<View style={[widgetBodyText.view, { opacity: 0.7 }]}>
 							<DayMenu />
-						</View>
-						<View style={widgetBodyButton.view}>
-							<TouchableOpacity
-								style={[BasicRoundButton.view, secondaryColour.view]}
-							>
-								<Text
-									style={[widgetBodyButton.text, secondaryColour.text]}
-								>
-									{'+'}
-								</Text>
-							</TouchableOpacity>
 						</View>
 					</View>
 				</View>
