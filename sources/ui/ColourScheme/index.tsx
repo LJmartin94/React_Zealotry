@@ -9,3 +9,4 @@ export {
 	SURFACE_COLOUR,
 	ERROR_COLOUR,
 } from './CreateThemedView';
+export { ThemeTestScreen } from './ThemeTestScreen';
