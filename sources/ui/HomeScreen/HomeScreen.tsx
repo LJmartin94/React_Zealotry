@@ -7,6 +7,7 @@ import {
 	View,
 } from 'react-native';
 
+import { Localiser } from '#features/Localiser';
 import {
 	BACKGROUND_COLOUR,
 	CreateThemedView,
@@ -53,7 +54,9 @@ export const HomeScreen = ({
 				<View style={widgetContainerStyle.view}>
 					<View style={[widgetTitleStyle.view, primaryVariant.view]}>
 						<Text style={[widgetTitleStyle.text, primaryVariant.text]}>
-							{'DAILY RITUALS'}
+							{Localiser.getString(
+								'homescreen_daymenu_title'
+							).toLocaleUpperCase()}
 						</Text>
 					</View>
 
