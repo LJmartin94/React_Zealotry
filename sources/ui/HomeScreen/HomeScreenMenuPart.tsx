@@ -9,6 +9,7 @@ import {
 	PRIMARY_VARIANT,
 } from '#ui/ColourScheme';
 import { DayMenu } from '#ui/DayMenu';
+import { SettingsMenu } from '#ui/SettingsMenu';
 import {
 	Body,
 	ComponentStyleSheet,
@@ -19,8 +20,31 @@ import {
 } from '#ui/Styles';
 import { DOUBLE_PADDING } from '#ui/Styles/GlobalStyle';
 
+const enum MenuWidgets {
+	dayMenu = 'dayMenu',
+	settings = 'settings',
+}
+
 export const HomeScreenMenuPart = () => {
 	const theme = new MaterialGrey();
+
+	const titleStrings: Record<MenuWidgets, string> = {
+		dayMenu: Localiser.getString(
+			'homescreen_daymenu_title'
+		).toLocaleUpperCase(),
+		settings: Localiser.getString(
+			'homescreen_settings_title'
+		).toLocaleUpperCase(),
+	};
+
+	const displayableComponents: Record<MenuWidgets, React.JSX.Element> = {
+		dayMenu: <DayMenu />,
+		settings: <SettingsMenu />,
+	};
+
+	let activeWidget: MenuWidgets;
+	// eslint-disable-next-line prefer-const
+	activeWidget = MenuWidgets.dayMenu;
 
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
@@ -28,7 +52,7 @@ export const HomeScreenMenuPart = () => {
 		<>
 			<View style={[titleStyle.view, primaryVariant.view]}>
 				<Text style={[titleStyle.text, primaryVariant.text]}>
-					{Localiser.getString('homescreen_daymenu_title').toLocaleUpperCase()}
+					{titleStrings[activeWidget]}
 				</Text>
 			</View>
 
@@ -40,7 +64,7 @@ export const HomeScreenMenuPart = () => {
 						{ padding: DOUBLE_PADDING },
 					]}
 				>
-					<DayMenu />
+					{displayableComponents[activeWidget]}
 				</View>
 			</View>
 		</>
