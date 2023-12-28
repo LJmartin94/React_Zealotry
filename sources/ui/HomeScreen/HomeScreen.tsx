@@ -22,12 +22,12 @@ import {
 	Float,
 	Gravity,
 	PushLeft,
-	PushRight,
 	SlightTransparency,
 	Subtitle,
 	Title,
 	VariableOpacity,
 } from '#ui/Styles';
+import { DOUBLE_PADDING } from '#ui/Styles/GlobalStyle';
 
 export type HomeScreenProps = {
 	title: string;
@@ -62,7 +62,7 @@ export const HomeScreen = ({
 							style={[
 								widgetBodyText.view,
 								VariableOpacity(0.8).view,
-								{ padding: 24 },
+								{ padding: DOUBLE_PADDING },
 							]}
 						>
 							<DayMenu />
@@ -85,9 +85,6 @@ const weights = StyleSheet.create({
 	widgetTitle: {
 		flex: 4,
 	},
-	widgetSubtitle: {
-		flex: 2,
-	},
 	widgetBody: {
 		flex: 17,
 	},
@@ -107,16 +104,8 @@ const widgetTitleStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetTitle],
 	[Subtitle.text]
 );
-const widgetSubtitleStyle = ComponentStyleSheet(
-	[Fill.view, weights.widgetSubtitle],
-	[Subtitle.text]
-);
 const widgetBodyStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetBody, Body.view],
 	[Body.text]
 );
 const widgetBodyText = ComponentStyleSheet([Fill.view, Float.view]);
-const widgetBodyButton = ComponentStyleSheet(
-	[Fill.view, Gravity.view, PushRight.view],
-	[Title.image]
-);
