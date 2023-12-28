@@ -10,7 +10,7 @@ const App = () => {
 	return (
 		<HomeScreen
 			// eslint-disable-next-line quotes
-			title={"Wodan's day, 40th day of Winter"}
+			title={"Wodan's day"}
 			backgroundImage={require('#assets/img/winter.jpg')}
 		/>
 	);

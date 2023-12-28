@@ -6,6 +6,11 @@ export const Fill = StyleSheet.create({
 		alignItems: 'stretch',
 		justifyContent: 'center',
 	},
+	text: {
+		flex: 1,
+		alignItems: 'stretch',
+		justifyContent: 'center',
+	},
 	image: {
 		flex: 1,
 		alignItems: 'stretch',

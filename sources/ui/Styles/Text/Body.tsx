@@ -1,8 +1,11 @@
 import { StyleSheet } from 'react-native';
 
-import { DEFAULT_FONT, DEFAULT_PADDING } from './AppStyle';
+import { DEFAULT_FONT, DEFAULT_PADDING } from '../GlobalStyle';
 
 export const Body = StyleSheet.create({
+	view: {
+		padding: DEFAULT_PADDING,
+	},
 	text: {
 		alignSelf: 'flex-start',
 		fontFamily: DEFAULT_FONT,
@@ -10,8 +13,5 @@ export const Body = StyleSheet.create({
 		lineHeight: 28, //works a bit like padding, and prevents the text being cut off vertically
 		padding: DEFAULT_PADDING,
 		color: 'black',
-	},
-	view: {
-		padding: DEFAULT_PADDING,
 	},
 });

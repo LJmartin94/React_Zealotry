@@ -10,11 +10,8 @@ import {
 import {
 	BACKGROUND_COLOUR,
 	CreateThemedView,
-	ERROR_COLOUR,
 	MaterialGrey,
-	PRIMARY_COLOUR,
 	PRIMARY_VARIANT,
-	SECONDARY_COLOUR,
 } from '#ui/ColourScheme';
 import { DayMenu } from '#ui/DayMenu';
 import {
@@ -22,13 +19,14 @@ import {
 	ComponentStyleSheet,
 	DEFAULT_PADDING,
 	Fill,
-	FillFloat,
-	FillGravity,
+	Float,
+	Gravity,
 	PushLeft,
 	PushRight,
-	SlightOpacity,
+	SlightTransparency,
 	Subtitle,
 	Title,
+	VariableOpacity,
 } from '#ui/Styles';
 
 export type HomeScreenProps = {
@@ -43,11 +41,8 @@ export const HomeScreen = ({
 }: HomeScreenProps) => {
 	const theme = new MaterialGrey();
 
-	const primaryColour = CreateThemedView(theme, PRIMARY_COLOUR, true);
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
-	const secondaryColour = CreateThemedView(theme, SECONDARY_COLOUR, true);
-	const errorColour = CreateThemedView(theme, ERROR_COLOUR, true);
 	return (
 		<>
 			<ImageBackground style={Fill.image} source={backgroundImage}>
@@ -63,7 +58,13 @@ export const HomeScreen = ({
 					</View>
 
 					<View style={[widgetBodyStyle.view, background.view]}>
-						<View style={[widgetBodyText.view, { opacity: 0.7 }]}>
+						<View
+							style={[
+								widgetBodyText.view,
+								VariableOpacity(0.8).view,
+								{ padding: 24 },
+							]}
+						>
 							<DayMenu />
 						</View>
 					</View>
@@ -93,13 +94,13 @@ const weights = StyleSheet.create({
 });
 
 const floatingTitleStyle = ComponentStyleSheet(
-	[FillGravity.view, weights.title],
+	[Fill.view, Gravity.view, weights.title],
 	[Title.text, PushLeft.text],
 	[]
 );
 const widgetContainerStyle = ComponentStyleSheet([
 	Fill.view,
-	SlightOpacity.view,
+	SlightTransparency.view,
 	weights.menu,
 ]);
 const widgetTitleStyle = ComponentStyleSheet(
@@ -114,8 +115,8 @@ const widgetBodyStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetBody, Body.view],
 	[Body.text]
 );
-const widgetBodyText = ComponentStyleSheet([FillFloat.view]);
+const widgetBodyText = ComponentStyleSheet([Fill.view, Float.view]);
 const widgetBodyButton = ComponentStyleSheet(
-	[FillGravity.view, PushRight.view],
+	[Fill.view, Gravity.view, PushRight.view],
 	[Title.image]
 );

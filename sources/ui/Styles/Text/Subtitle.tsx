@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { DEFAULT_FONT } from './AppStyle';
+import { DEFAULT_FONT } from '../GlobalStyle';
 
 export const Subtitle = StyleSheet.create({
 	text: {

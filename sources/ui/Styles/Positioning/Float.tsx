@@ -1,14 +1,13 @@
 import { StyleSheet } from 'react-native';
 
-export const FillFloat = StyleSheet.create({
+export const Float = StyleSheet.create({
 	view: {
-		flex: 1,
-		alignItems: 'stretch',
+		justifyContent: 'flex-start',
+	},
+	text: {
 		justifyContent: 'flex-start',
 	},
 	image: {
-		flex: 1,
-		alignItems: 'stretch',
 		justifyContent: 'flex-start',
 	},
 });

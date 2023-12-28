@@ -24,11 +24,11 @@ import {
 	ComponentStyleSheet,
 	DEFAULT_PADDING,
 	Fill,
-	FillFloat,
-	FillGravity,
+	Float,
+	Gravity,
 	PushLeft,
 	PushRight,
-	SlightOpacity,
+	SlightTransparency,
 	Subtitle,
 	Title,
 } from '#ui/Styles';
@@ -117,13 +117,13 @@ const weights = StyleSheet.create({
 });
 
 const floatingTitleStyle = ComponentStyleSheet(
-	[FillGravity.view, weights.title],
+	[Fill.view, Gravity.view, weights.title],
 	[Title.text, PushLeft.text],
 	[]
 );
 const widgetContainerStyle = ComponentStyleSheet([
 	Fill.view,
-	SlightOpacity.view,
+	SlightTransparency.view,
 	weights.menu,
 ]);
 const widgetTitleStyle = ComponentStyleSheet(
@@ -138,8 +138,8 @@ const widgetBodyStyle = ComponentStyleSheet(
 	[Fill.view, weights.widgetBody, Body.view],
 	[Body.text]
 );
-const widgetBodyText = ComponentStyleSheet([FillFloat.view]);
+const widgetBodyText = ComponentStyleSheet([Fill.view, Float.view]);
 const widgetBodyButton = ComponentStyleSheet(
-	[FillGravity.view, PushRight.view],
+	[Fill.view, Gravity.view, PushRight.view],
 	[Title.image]
 );

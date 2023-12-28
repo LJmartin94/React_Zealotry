@@ -1,14 +1,13 @@
 import { StyleSheet } from 'react-native';
 
-export const FillGravity = StyleSheet.create({
+export const Gravity = StyleSheet.create({
 	view: {
-		flex: 1,
-		alignItems: 'stretch',
+		justifyContent: 'flex-end',
+	},
+	text: {
 		justifyContent: 'flex-end',
 	},
 	image: {
-		flex: 1,
-		alignItems: 'stretch',
 		justifyContent: 'flex-end',
 	},
 });

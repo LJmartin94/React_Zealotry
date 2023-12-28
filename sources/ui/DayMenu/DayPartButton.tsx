@@ -6,7 +6,7 @@ import {
 	ImageSourcePropType,
 } from 'react-native';
 
-import { FillGravity, Title } from '#ui/Styles';
+import { Fill, Gravity, Title } from '#ui/Styles';
 
 export type DayPartProps = {
 	title: string;
@@ -18,11 +18,11 @@ export const DayPartButton = ({
 	backgroundImage,
 }: DayPartProps) => {
 	return (
-		<TouchableOpacity style={FillGravity.view}>
+		<TouchableOpacity style={[Fill.view, Gravity.view]}>
 			<ImageBackground
 				source={backgroundImage}
 				resizeMode='cover'
-				style={FillGravity.image}
+				style={[Fill.view, Gravity.image]}
 			>
 				<Text style={Title.text}>{title}</Text>
 			</ImageBackground>
