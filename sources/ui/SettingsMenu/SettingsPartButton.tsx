@@ -1,11 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-import {
-	CreateThemedView,
-	MaterialGrey,
-	PRIMARY_COLOUR,
-} from '#ui/ColourScheme';
+import { CreateThemedView, MaterialGrey, PRIMARY_COLOUR } from '#ui/Styles';
 import { MainButtonWithIcon } from '#ui/Styles/ComponentStyles/MainButtonWithIcon';
 
 export type SettingsPartProps = {

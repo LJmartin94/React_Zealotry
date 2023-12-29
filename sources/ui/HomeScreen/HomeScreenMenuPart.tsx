@@ -2,12 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { Localiser } from '#features/Localiser';
-import {
-	BACKGROUND_COLOUR,
-	CreateThemedView,
-	MaterialGrey,
-	PRIMARY_VARIANT,
-} from '#ui/ColourScheme';
 import { DayMenu } from '#ui/DayMenu';
 import { SettingsMenu } from '#ui/SettingsMenu';
 import {
@@ -17,6 +11,10 @@ import {
 	Float,
 	Subtitle,
 	VariableOpacity,
+	BACKGROUND_COLOUR,
+	CreateThemedView,
+	MaterialGrey,
+	PRIMARY_VARIANT,
 } from '#ui/Styles';
 import { DOUBLE_PADDING } from '#ui/Styles/GlobalStyle';
 

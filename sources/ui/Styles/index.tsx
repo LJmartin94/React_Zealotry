@@ -1,4 +1,18 @@
-//FullyStyledComponents
+//ColourScheme
+export { MaterialGrey } from './ColourScheme/MaterialGrey';
+export {
+	CreateThemedView,
+	PRIMARY_COLOUR,
+	PRIMARY_VARIANT,
+	SECONDARY_COLOUR,
+	SECONDARY_VARIANT,
+	BACKGROUND_COLOUR,
+	SURFACE_COLOUR,
+	ERROR_COLOUR,
+} from './ColourScheme/CreateThemedView';
+export { ThemeTestScreen } from './ColourScheme/ThemeTestScreen';
+
+//ComponentStyles
 export { BasicRoundButton } from './ComponentStyles/BasicRoundButton';
 
 //Positioning
