@@ -2,6 +2,8 @@ import { ColorValue, StyleSheet } from 'react-native';
 
 import { ColourSchemeTemplate } from './ColourSchemeTemplate';
 
+import { ViewTextImgStyle } from '#ui/Styles/utils/VTI';
+
 export const enum ThemeColourElement {
 	primaryColour = 'primaryColour',
 	primaryVariant = 'primaryVariant',
@@ -20,11 +22,11 @@ export const BACKGROUND_COLOUR = ThemeColourElement.backgroundColour;
 export const SURFACE_COLOUR = ThemeColourElement.surfaceColour;
 export const ERROR_COLOUR = ThemeColourElement.errorColour;
 
-export function CreateThemedView(
+export const CreateThemedView = (
 	themeStyle: ColourSchemeTemplate,
 	flavour: ThemeColourElement,
 	isInLightmode: boolean | undefined
-) {
+): ViewTextImgStyle => {
 	if (isInLightmode === undefined) isInLightmode = themeStyle.lightDefault;
 	let onColour: ColorValue;
 	let fillColour: ColorValue;
@@ -118,4 +120,4 @@ export function CreateThemedView(
 			color: onColour,
 		},
 	});
-}
+};

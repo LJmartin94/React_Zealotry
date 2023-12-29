@@ -83,9 +83,7 @@ export const ThemeTestScreen = ({
 							<TouchableOpacity
 								style={[BasicRoundButton.view, secondaryColour.view]}
 							>
-								<Text
-									style={[widgetBodyButton.text, secondaryColour.text]}
-								>
+								<Text style={[widgetBodyButton.text, secondaryColour.text]}>
 									{'+'}
 								</Text>
 							</TouchableOpacity>
