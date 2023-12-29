@@ -10,7 +10,6 @@ export {
 	SURFACE_COLOUR,
 	ERROR_COLOUR,
 } from './ColourScheme/CreateThemedView';
-export { ThemeTestScreen } from './ColourScheme/ThemeTestScreen';
 
 //ComponentStyles
 export { BasicRoundButton } from './ComponentStyles/BasicRoundButton';

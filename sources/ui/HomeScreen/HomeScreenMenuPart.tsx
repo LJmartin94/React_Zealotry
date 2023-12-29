@@ -1,5 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {
+	Gesture,
+	GestureDetector,
+	GestureHandlerRootView,
+	Swipeable,
+} from 'react-native-gesture-handler';
 
 import { Localiser } from '#features/Localiser';
 import { DayMenu } from '#ui/DayMenu';
@@ -17,6 +23,7 @@ import {
 	PRIMARY_VARIANT,
 } from '#ui/Styles';
 import { DOUBLE_PADDING } from '#ui/Styles/GlobalStyle';
+import { AppleStyleSwipeableRow } from '../../dev_snippets/Test';
 
 const enum MenuWidgets {
 	dayMenu = 'dayMenu',
@@ -46,26 +53,34 @@ export const HomeScreenMenuPart = () => {
 
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
-	return (
-		<>
-			<View style={[titleStyle.view, primaryVariant.view]}>
-				<Text style={[titleStyle.text, primaryVariant.text]}>
-					{titleStrings[activeWidget]}
-				</Text>
-			</View>
 
-			<View style={[menuStyle.view, background.view]}>
-				<View
-					style={[
-						innerMenuContainerStyle.view,
-						VariableOpacity(0.8).view,
-						{ padding: DOUBLE_PADDING },
-					]}
-				>
-					{displayableComponents[activeWidget]}
-				</View>
+	const pan = Gesture.Pan();
+	return (
+		<GestureDetector gesture={pan}>
+			<View style={{ flex: 1 }}>
+				<>
+					<View style={[titleStyle.view, primaryVariant.view]}>
+						<Text style={[titleStyle.text, primaryVariant.text]}>
+							{titleStrings[activeWidget]}
+						</Text>
+					</View>
+
+					<AppleStyleSwipeableRow />
+
+					<View style={[menuStyle.view, background.view]}>
+						<View
+							style={[
+								innerMenuContainerStyle.view,
+								VariableOpacity(0.8).view,
+								{ padding: DOUBLE_PADDING },
+							]}
+						>
+							{displayableComponents[activeWidget]}
+						</View>
+					</View>
+				</>
 			</View>
-		</>
+		</GestureDetector>
 	);
 };
 
