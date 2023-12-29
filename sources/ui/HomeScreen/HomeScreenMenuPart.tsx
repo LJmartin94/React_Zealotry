@@ -42,7 +42,7 @@ export const HomeScreenMenuPart = () => {
 
 	let activeWidget: MenuWidgets;
 	// eslint-disable-next-line prefer-const
-	activeWidget = MenuWidgets.settings;
+	activeWidget = MenuWidgets.dayMenu;
 
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
