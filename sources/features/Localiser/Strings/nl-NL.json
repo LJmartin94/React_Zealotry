@@ -3,5 +3,8 @@
 	"day_menu_title": "Dag",
 	"evening_menu_title": "Avond",
 	"homescreen_daymenu_title": "Dagelijkse Rituelen",
-	"homescreen_settings_title": "Instellingen"
+	"homescreen_settings_title": "Instellingen",
+	"settings_menu_stats": "Statistieken",
+	"settings_menu_data": "Gegevens beheer",
+	"settings_menu_weather": "Weersverwachting"
 }

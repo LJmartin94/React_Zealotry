@@ -3,5 +3,8 @@
 	"day_menu_title": "Day",
 	"evening_menu_title": "Evening",
 	"homescreen_daymenu_title": "Daily Rituals",
-	"homescreen_settings_title": "Settings"
+	"homescreen_settings_title": "Settings",
+	"settings_menu_stats": "User Stats",
+	"settings_menu_data": "App Data Management",
+	"settings_menu_weather": "Weather Forecast"
 }
