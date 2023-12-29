@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 
-export const Gravity = StyleSheet.create({
+import { ViewTextImgStyle } from '../utils/VTI';
+
+export const Gravity: ViewTextImgStyle = StyleSheet.create({
 	view: {
 		justifyContent: 'flex-end',
 	},

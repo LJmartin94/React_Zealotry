@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 import { DEFAULT_FONT, DEFAULT_PADDING } from '../GlobalStyle';
+import { ViewTextImgStyle } from '../utils/VTI';
 
-export const Body = StyleSheet.create({
+export const Body: ViewTextImgStyle = StyleSheet.create({
 	view: {
 		padding: DEFAULT_PADDING,
 	},
@@ -14,4 +15,5 @@ export const Body = StyleSheet.create({
 		padding: DEFAULT_PADDING,
 		color: 'black',
 	},
+	image: {},
 });

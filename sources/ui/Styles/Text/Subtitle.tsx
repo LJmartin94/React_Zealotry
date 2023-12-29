@@ -1,8 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 import { DEFAULT_FONT } from '../GlobalStyle';
+import { ViewTextImgStyle } from '../utils/VTI';
 
-export const Subtitle = StyleSheet.create({
+export const Subtitle: ViewTextImgStyle = StyleSheet.create({
+	view: {},
 	text: {
 		alignSelf: 'center',
 		fontFamily: DEFAULT_FONT,
@@ -11,4 +13,5 @@ export const Subtitle = StyleSheet.create({
 		padding: 0,
 		color: 'black',
 	},
+	image: {},
 });

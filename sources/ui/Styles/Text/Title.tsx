@@ -1,8 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 import { DEFAULT_FONT, H_ONE_FONT_SIZE } from '../GlobalStyle';
+import { ViewTextImgStyle } from '../utils/VTI';
 
-export const Title = StyleSheet.create({
+export const Title: ViewTextImgStyle = StyleSheet.create({
+	view: {},
 	text: {
 		alignSelf: 'center',
 		fontFamily: DEFAULT_FONT,
@@ -11,8 +13,5 @@ export const Title = StyleSheet.create({
 		padding: 0,
 		color: 'black',
 	},
-	view: {},
-	image: {
-		fontSize: H_ONE_FONT_SIZE,
-	},
+	image: {},
 });

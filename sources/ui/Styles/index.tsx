@@ -1,5 +1,5 @@
 //FullyStyledComponents
-export { BasicRoundButton } from './FullyStyledComponents/BasicRoundButton';
+export { BasicRoundButton } from './ComponentStyles/BasicRoundButton';
 
 //Positioning
 export { Float } from './Positioning/Float';
@@ -22,5 +22,6 @@ export { VariableOpacity } from './Transparency/VariableOpacity';
 //utils
 export { ComponentStyleSheet } from './utils/ComponentStyleSheet';
 export { StyleComposer } from './utils/StyleComposer';
+export type { ViewTextImgStyle } from './utils/VTI';
 
 export { DEFAULT_FONT, DEFAULT_PADDING } from './GlobalStyle';

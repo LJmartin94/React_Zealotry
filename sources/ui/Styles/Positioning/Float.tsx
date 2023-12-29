@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 
-export const Float = StyleSheet.create({
+import { ViewTextImgStyle } from '../utils/VTI';
+
+export const Float: ViewTextImgStyle = StyleSheet.create({
 	view: {
 		justifyContent: 'flex-start',
 	},

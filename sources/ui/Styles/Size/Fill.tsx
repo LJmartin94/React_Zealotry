@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 
-export const Fill = StyleSheet.create({
+import { ViewTextImgStyle } from '../utils/VTI';
+
+export const Fill: ViewTextImgStyle = StyleSheet.create({
 	view: {
 		flex: 1,
 		alignItems: 'stretch',
