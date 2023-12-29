@@ -6,5 +6,12 @@
 	"homescreen_settings_title": "Settings",
 	"settings_menu_stats": "User Stats",
 	"settings_menu_data": "App Data Management",
-	"settings_menu_weather": "Weather Forecast"
+	"settings_menu_weather": "Weather Forecast",
+	"monday": "Day of the Moon",
+	"tuesday": "Týr's Day",
+	"wednesday": "Wodan's Day",
+	"thursday": "Thor's Day",
+	"friday": "Frigg's Day",
+	"saturday": "Saturn's Day",
+	"sunday": "Day of the Sun"
 }
