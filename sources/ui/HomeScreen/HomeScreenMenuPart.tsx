@@ -26,7 +26,7 @@ const enum MenuWidgets {
 }
 
 export const HomeScreenMenuPart = () => {
-	const theme = new MaterialGrey();
+	const theme = new MaterialGrey(); //TODO: get theme from state
 
 	const titleStrings: Record<MenuWidgets, string> = {
 		dayMenu: Localiser.getString(
@@ -44,7 +44,7 @@ export const HomeScreenMenuPart = () => {
 
 	let activeWidget: MenuWidgets;
 	// eslint-disable-next-line prefer-const
-	activeWidget = MenuWidgets.dayMenu;
+	activeWidget = MenuWidgets.settings;
 
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
@@ -59,7 +59,7 @@ export const HomeScreenMenuPart = () => {
 			<View style={[menuStyle.view, background.view]}>
 				<View
 					style={[
-						menuText.view,
+						innerMenuContainerStyle.view,
 						VariableOpacity(0.8).view,
 						{ padding: DOUBLE_PADDING },
 					]}
@@ -88,4 +88,4 @@ const menuStyle = ComponentStyleSheet(
 	[Fill.view, weights.menu, Body.view],
 	[Body.text]
 );
-const menuText = ComponentStyleSheet([Fill.view, Float.view]);
+const innerMenuContainerStyle = ComponentStyleSheet([Fill.view, Float.view]);

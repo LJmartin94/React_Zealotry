@@ -1,31 +1,24 @@
 import React from 'react';
-import {
-	ImageBackground,
-	Text,
-	TouchableOpacity,
-	ImageSourcePropType,
-} from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
-import { Fill, Gravity, Title } from '#ui/Styles';
+import {
+	CreateThemedView,
+	MaterialGrey,
+	PRIMARY_COLOUR,
+} from '#ui/ColourScheme';
+import { MainButtonWithIcon } from '#ui/Styles/ComponentStyles/MainButtonWithIcon';
 
 export type SettingsPartProps = {
 	title: string;
-	backgroundImage: ImageSourcePropType;
+	icon: unknown;
 };
 
-export const SettingsPartButton = ({
-	title,
-	backgroundImage,
-}: SettingsPartProps) => {
+export const SettingsPartButton = ({ title, icon }: SettingsPartProps) => {
+	const style = CreateThemedView(new MaterialGrey(), PRIMARY_COLOUR, true); //TODO: get theme from state
+
 	return (
-		<TouchableOpacity style={[Fill.view, Gravity.view]}>
-			<ImageBackground
-				source={backgroundImage}
-				resizeMode='cover'
-				style={[Fill.view, Gravity.image]}
-			>
-				<Text style={Title.text}>{'setting title'}</Text>
-			</ImageBackground>
+		<TouchableOpacity style={MainButtonWithIcon(style, icon).view}>
+			<Text style={MainButtonWithIcon(style, icon).text}>{title}</Text>
 		</TouchableOpacity>
 	);
 };

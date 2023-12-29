@@ -43,7 +43,7 @@ export const ThemeTestScreen = ({
 	title,
 	backgroundImage,
 }: HomeScreenProps) => {
-	const theme = new MaterialGrey();
+	const theme = new MaterialGrey(); //TODO: get theme from state
 
 	const primaryColour = CreateThemedView(theme, PRIMARY_COLOUR, true);
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);

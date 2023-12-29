@@ -11,16 +11,16 @@ export const SettingsMenu = () => {
 	return (
 		<View style={[Fill.view, { gap: HALF_PADDING }]}>
 			<SettingsPartButton
-				title={Localiser.getString('morning_menu_title')}
-				backgroundImage={require('#assets/img/morning_button.png')}
+				title={Localiser.getString('settings_menu_stats')}
+				icon={null}
 			/>
 			<SettingsPartButton
-				title={Localiser.getString('day_menu_title')}
-				backgroundImage={require('#assets/img/day_button.png')}
+				title={Localiser.getString('settings_menu_data')}
+				icon={null}
 			/>
 			<SettingsPartButton
-				title={Localiser.getString('evening_menu_title')}
-				backgroundImage={require('#assets/img/evening_button.png')}
+				title={Localiser.getString('settings_menu_weather')}
+				icon={null}
 			/>
 		</View>
 	);

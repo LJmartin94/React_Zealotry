@@ -1,0 +1,2 @@
+//TODO: get theme from state
+Instead of hardcoding it in places
