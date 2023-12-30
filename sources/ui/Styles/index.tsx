@@ -37,4 +37,12 @@ export { ComponentStyleSheet } from './utils/ComponentStyleSheet';
 export { StyleComposer } from './utils/StyleComposer';
 export type { ViewTextImgStyle } from './utils/VTI';
 
-export { DEFAULT_FONT, DEFAULT_PADDING } from './GlobalStyle';
+export {
+	DEFAULT_FONT,
+	DEFAULT_PADDING,
+	H_ONE_FONT_SIZE,
+	TINY_PADDING,
+	HALF_PADDING,
+	DOUBLE_PADDING,
+	QUADRUPLE_PADDING,
+} from './GlobalStyle';
