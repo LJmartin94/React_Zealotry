@@ -2,8 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 
-import { AppleStyleSwipeableRow } from '../../dev_snippets/Test';
-
 import { Localiser } from '#features/Localiser';
 import { DayMenu } from '#ui/DayMenu';
 import { SettingsMenu } from '#ui/SettingsMenu';
@@ -66,9 +64,6 @@ export const HomeScreenMenuPart = () => {
 						{titleStrings[activeWidget]}
 					</Text>
 				</View>
-
-				<AppleStyleSwipeableRow />
-
 				<View style={[menuStyle.view, background.view]}>
 					<View
 						style={[
