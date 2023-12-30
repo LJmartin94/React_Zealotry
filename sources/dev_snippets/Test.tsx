@@ -2,6 +2,7 @@ import {
 	Body,
 	CreateThemedView,
 	MaterialGrey,
+	PushLeft,
 	SECONDARY_COLOUR,
 	Title,
 } from '#ui/Styles';
@@ -25,6 +26,7 @@ const renderLeftActions = (progress, dragX) => {
 					{
 						transform: [{ translateX: trans }],
 					},
+					PushLeft.text,
 				]}
 			>
 				Archive
