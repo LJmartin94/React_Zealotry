@@ -1,29 +1,25 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {
-	Gesture,
-	GestureDetector,
-	GestureHandlerRootView,
-	Swipeable,
-} from 'react-native-gesture-handler';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+
+import { AppleStyleSwipeableRow } from '../../dev_snippets/Test';
 
 import { Localiser } from '#features/Localiser';
 import { DayMenu } from '#ui/DayMenu';
 import { SettingsMenu } from '#ui/SettingsMenu';
 import {
+	BACKGROUND_COLOUR,
 	Body,
 	ComponentStyleSheet,
+	CreateThemedView,
+	DOUBLE_PADDING,
 	Fill,
 	Float,
-	Subtitle,
-	VariableOpacity,
-	BACKGROUND_COLOUR,
-	CreateThemedView,
 	MaterialGrey,
 	PRIMARY_VARIANT,
+	Subtitle,
+	VariableOpacity,
 } from '#ui/Styles';
-import { DOUBLE_PADDING } from '#ui/Styles/GlobalStyle';
-import { AppleStyleSwipeableRow } from '../../dev_snippets/Test';
 
 const enum MenuWidgets {
 	dayMenu = 'dayMenu',
@@ -48,37 +44,42 @@ export const HomeScreenMenuPart = () => {
 	};
 
 	let activeWidget: MenuWidgets;
-	// eslint-disable-next-line prefer-const
 	activeWidget = MenuWidgets.dayMenu;
 
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
 
-	const pan = Gesture.Pan();
+	const pan = Gesture.Pan().onFinalize(() => {
+		console.log('Panning at the disco!');
+		if (activeWidget === MenuWidgets.dayMenu) {
+			activeWidget = MenuWidgets.settings;
+		} else {
+			activeWidget = MenuWidgets.dayMenu;
+		}
+		console.log(activeWidget);
+	});
 	return (
 		<GestureDetector gesture={pan}>
-			<View style={{ flex: 1 }}>
-				<>
-					<View style={[titleStyle.view, primaryVariant.view]}>
-						<Text style={[titleStyle.text, primaryVariant.text]}>
-							{titleStrings[activeWidget]}
-						</Text>
-					</View>
+			<View style={Fill.view}>
+				<View style={[titleStyle.view, primaryVariant.view]}>
+					<Text style={[titleStyle.text, primaryVariant.text]}>
+						{titleStrings[activeWidget]}
+					</Text>
+				</View>
 
-					<AppleStyleSwipeableRow />
+				<AppleStyleSwipeableRow />
 
-					<View style={[menuStyle.view, background.view]}>
-						<View
-							style={[
-								innerMenuContainerStyle.view,
-								VariableOpacity(0.8).view,
-								{ padding: DOUBLE_PADDING },
-							]}
-						>
-							{displayableComponents[activeWidget]}
-						</View>
+				<View style={[menuStyle.view, background.view]}>
+					<View
+						style={[
+							innerMenuContainerStyle.view,
+							VariableOpacity(0.8).view,
+							{ padding: DOUBLE_PADDING },
+						]}
+					>
+						{displayableComponents[activeWidget]}
 					</View>
-				</>
+				</View>
 			</View>
 		</GestureDetector>
 	);
