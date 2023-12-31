@@ -12,7 +12,7 @@ const App = () => {
 	return (
 		<GestureHandlerRootView style={Fill.view}>
 			<HomeScreen
-				title={Localiser.getString('wednesday')}
+				title={`${Localiser.getString('wednesday')}, \n23rd day of Winter`}
 				backgroundImage={require('#assets/img/winter.jpg')}
 			/>
 		</GestureHandlerRootView>

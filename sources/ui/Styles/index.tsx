@@ -11,6 +11,9 @@ export {
 	ERROR_COLOUR,
 } from './ColourScheme/CreateThemedView';
 
+//Components
+export { BacklightText } from './Components/BacklightText.tsx';
+
 //ComponentStyles
 export { BasicRoundButton } from './ComponentStyles/BasicRoundButton';
 

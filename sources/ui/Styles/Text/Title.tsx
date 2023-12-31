@@ -12,6 +12,7 @@ export const Title: ViewTextImgStyle = StyleSheet.create({
 		lineHeight: (H_ONE_FONT_SIZE / 2) * 3, //works a bit like padding, and prevents the text being cut off vertically
 		padding: 0,
 		color: 'black',
+		textShadowColor: '#eeeeee80',
 	},
 	image: {},
 });

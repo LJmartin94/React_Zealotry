@@ -14,6 +14,7 @@ export const Body: ViewTextImgStyle = StyleSheet.create({
 		lineHeight: 28, //works a bit like padding, and prevents the text being cut off vertically
 		padding: DEFAULT_PADDING,
 		color: 'black',
+		textShadowColor: '#eeeeee80',
 	},
 	image: {},
 });

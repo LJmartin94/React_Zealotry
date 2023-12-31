@@ -3,13 +3,13 @@ import {
 	ImageBackground,
 	ImageSourcePropType,
 	StyleSheet,
-	Text,
 	View,
 } from 'react-native';
 
 import { HomeScreenMenuPart } from './HomeScreenMenuPart';
 
 import {
+	BacklightText,
 	ComponentStyleSheet,
 	DEFAULT_PADDING,
 	Fill,
@@ -30,7 +30,7 @@ export const HomeScreen = ({ title, backgroundImage }: HomeScreenProps) => {
 		<>
 			<ImageBackground style={Fill.image} source={backgroundImage}>
 				<View style={floatingTitleStyle.view}>
-					<Text style={floatingTitleStyle.text}>{title}</Text>
+					<BacklightText style={floatingTitleStyle.text}>{title}</BacklightText>
 				</View>
 				<View style={widgetContainerStyle.view}>
 					<HomeScreenMenuPart />
@@ -52,7 +52,7 @@ const weights = StyleSheet.create({
 
 const floatingTitleStyle = ComponentStyleSheet(
 	[Fill.view, Gravity.view, weights.title],
-	[Title.text, PushLeft.text],
+	[Title.text, PushLeft.text, { color: 'white', textShadowColor: '#000000ff' }],
 	[]
 );
 const widgetContainerStyle = ComponentStyleSheet([

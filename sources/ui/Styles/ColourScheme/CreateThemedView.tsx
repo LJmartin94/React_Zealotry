@@ -118,6 +118,7 @@ export const CreateThemedView = (
 		},
 		text: {
 			color: onColour,
+			textShadowColor: fillColour,
 		},
 	});
 };
