@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import { Localiser } from '#features/Localiser';
 import { DayMenu } from '#ui/DayMenu';
 import { SettingsMenu } from '#ui/SettingsMenu';
@@ -60,9 +62,27 @@ export const HomeScreenMenuPart = () => {
 		<GestureDetector gesture={pan}>
 			<View style={Fill.view}>
 				<View style={[titleStyle.view, primaryVariant.view]}>
+					<Icon
+						name='caret-left'
+						style={[
+							titleStyle.text,
+							primaryVariant.text,
+							VariableOpacity(0.5).text,
+							{ padding: DOUBLE_PADDING },
+						]}
+					/>
 					<Text style={[titleStyle.text, primaryVariant.text]}>
 						{titleStrings[activeWidget]}
 					</Text>
+					<Icon
+						name='caret-right'
+						style={[
+							titleStyle.text,
+							primaryVariant.text,
+							VariableOpacity(0.5).text,
+							{ padding: DOUBLE_PADDING },
+						]}
+					/>
 				</View>
 				<View style={[menuStyle.view, background.view]}>
 					<View
@@ -83,6 +103,8 @@ export const HomeScreenMenuPart = () => {
 const weights = StyleSheet.create({
 	title: {
 		flex: 4,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
 	},
 	menu: {
 		flex: 17,
