@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 
@@ -28,6 +28,7 @@ const enum MenuWidgets {
 
 export const HomeScreenMenuPart = () => {
 	const theme = new MaterialGrey(); //TODO: get theme from state
+	const [getActiveWidget, setActiveWidget] = useState(MenuWidgets.dayMenu);
 
 	const titleStrings: Record<MenuWidgets, string> = {
 		dayMenu: Localiser.getString(
@@ -43,20 +44,17 @@ export const HomeScreenMenuPart = () => {
 		settings: <SettingsMenu />,
 	};
 
-	let activeWidget: MenuWidgets;
-	activeWidget = MenuWidgets.dayMenu;
-
 	const primaryVariant = CreateThemedView(theme, PRIMARY_VARIANT, true);
 	const background = CreateThemedView(theme, BACKGROUND_COLOUR, true);
 
 	const pan = Gesture.Pan().onFinalize(() => {
 		console.log('Panning at the disco!');
-		if (activeWidget === MenuWidgets.dayMenu) {
-			activeWidget = MenuWidgets.settings;
+		if (getActiveWidget === MenuWidgets.dayMenu) {
+			setActiveWidget(MenuWidgets.settings);
 		} else {
-			activeWidget = MenuWidgets.dayMenu;
+			setActiveWidget(MenuWidgets.dayMenu);
 		}
-		console.log(activeWidget);
+		console.log(getActiveWidget);
 	});
 	return (
 		<GestureDetector gesture={pan}>
@@ -72,7 +70,7 @@ export const HomeScreenMenuPart = () => {
 						]}
 					/>
 					<Text style={[titleStyle.text, primaryVariant.text]}>
-						{titleStrings[activeWidget]}
+						{titleStrings[getActiveWidget]}
 					</Text>
 					<Icon
 						name='caret-right'
@@ -92,7 +90,7 @@ export const HomeScreenMenuPart = () => {
 							{ padding: DOUBLE_PADDING },
 						]}
 					>
-						{displayableComponents[activeWidget]}
+						{displayableComponents[getActiveWidget]}
 					</View>
 				</View>
 			</View>
